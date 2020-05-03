@@ -1,0 +1,1081 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.2 (64-bit)
+# SW Build 2615518 on Fri Aug  9 15:55:25 MDT 2019
+# IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+# Start of session at: Thu Sep 26 17:49:26 2019
+# Process ID: 1820
+# Current directory: C:/Users/kaadje/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12908
+# Log file: C:/Users/kaadje/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/kaadje/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project lab3 C:/Xilinx/kayode/lab3 -part xc7a100tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 797.074 ; gain = 37.371
+file mkdir C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/2_bit_comparator.vhd w ]
+add_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/2_bit_comparator.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/2_bit_comparator.vhd] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/2_bit_comparator.vhd
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator.vhd w ]
+add_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator.vhd
+file mkdir C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator_test.vhd w ]
+add_files -fileset sim_1 C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator_test.vhd
+update_compile_order -fileset sim_1
+set_property top comparator_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'comparator_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj comparator_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comparator'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comparator_test'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xelab -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator_test_behav xil_defaultlib.comparator_test -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator_test_behav xil_defaultlib.comparator_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.comparator [comparator_default]
+Compiling architecture behavioral of entity xil_defaultlib.comparator_test
+Built simulation snapshot comparator_test_behav
+
+****** Webtalk v2019.1.2 (64-bit)
+  **** SW Build 2615518 on Fri Aug  9 15:55:25 MDT 2019
+  **** IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/xsim.dir/comparator_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/xsim.dir/comparator_test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Sep 26 19:02:10 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 79.359 ; gain = 12.547
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 26 19:02:10 2019...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:27 . Memory (MB): peak = 889.332 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '27' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "comparator_test_behav -key {Behavioral:sim_1:Functional:comparator_test} -tclbatch {comparator_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source comparator_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'comparator_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:35 . Memory (MB): peak = 926.164 ; gain = 36.832
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 80 ns
+run all
+run all
+file mkdir C:/Xilinx/kayode/lab3/lab3.srcs/constrs_1
+add_files -fileset constrs_1 -norecurse C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc
+save_wave_config {C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg
+set_property xsim.view C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg [get_filesets sim_1]
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Sep 26 19:10:10 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+[Thu Sep 26 19:10:10 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:15 . Memory (MB): peak = 926.684 ; gain = 0.000
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1769.188 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1769.188 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1769.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.270 ; gain = 977.586
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator2.vhd w ]
+add_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator2.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator2_test.vhd w ]
+add_files -fileset sim_1 C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator2_test.vhd
+update_compile_order -fileset sim_1
+set_property top comparator2 [current_fileset]
+update_compile_order -fileset sources_1
+set_property top comparator2_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:25 . Memory (MB): peak = 2170.500 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'comparator2_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj comparator2_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comparator2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator2_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comparator2_test'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xelab -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator2_test_behav xil_defaultlib.comparator2_test -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator2_test_behav xil_defaultlib.comparator2_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.comparator2 [comparator2_default]
+Compiling architecture behavioral of entity xil_defaultlib.comparator2_test
+Built simulation snapshot comparator2_test_behav
+
+****** Webtalk v2019.1.2 (64-bit)
+  **** SW Build 2615518 on Fri Aug  9 15:55:25 MDT 2019
+  **** IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/xsim.dir/comparator2_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/xsim.dir/comparator2_test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Sep 26 19:25:53 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 109.395 ; gain = 23.191
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 26 19:25:53 2019...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 2170.500 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '25' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "comparator2_test_behav -key {Behavioral:sim_1:Functional:comparator2_test} -tclbatch {comparator2_test.tcl} -view {C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg
+WARNING: Simulation object /comparator_test/A was not found in the design.
+WARNING: Simulation object /comparator_test/B was not found in the design.
+WARNING: Simulation object /comparator_test/lt_o was not found in the design.
+WARNING: Simulation object /comparator_test/eq_o was not found in the design.
+WARNING: Simulation object /comparator_test/gt_o was not found in the design.
+source comparator2_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'comparator2_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 2170.500 ; gain = 0.000
+run all
+run all
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 80 ns
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 80 ns
+run all
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 2379.988 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'comparator2_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj comparator2_test_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xelab -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator2_test_behav xil_defaultlib.comparator2_test -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator2_test_behav xil_defaultlib.comparator2_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "comparator2_test_behav -key {Behavioral:sim_1:Functional:comparator2_test} -tclbatch {comparator2_test.tcl} -view {C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg
+WARNING: Simulation object /comparator_test/A was not found in the design.
+WARNING: Simulation object /comparator_test/B was not found in the design.
+WARNING: Simulation object /comparator_test/lt_o was not found in the design.
+WARNING: Simulation object /comparator_test/eq_o was not found in the design.
+WARNING: Simulation object /comparator_test/gt_o was not found in the design.
+source comparator2_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'comparator2_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2379.988 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 80 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 80 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 80 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+save_wave_config {C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg}
+save_wave_config {C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg}
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: comparator2
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2427.605 ; gain = 46.375
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'comparator2' [C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator2.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'comparator2' (1#1) [C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator2.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2452.875 ; gain = 71.645
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2471.738 ; gain = 90.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2471.738 ; gain = 90.508
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2528.047 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2528.047 ; gain = 146.816
+5 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2528.047 ; gain = 146.816
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Xilinx/kayode/lab3/lab3.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Thu Sep 26 19:49:17 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Thu Sep 26 19:50:34 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2658.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+current_design impl_1
+refresh_design
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2873.438 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2873.438 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3131.773 ; gain = 258.336
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'A[1]'; it is not accessible from the fabric routing.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: comparator2
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3189.438 ; gain = 34.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'comparator2' [C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator2.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'comparator2' (1#1) [C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator2.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3209.645 ; gain = 54.461
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3233.477 ; gain = 78.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3233.477 ; gain = 78.293
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3285.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3285.391 ; gain = 130.207
+5 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3285.391 ; gain = 130.207
+write_schematic -format pdf -orientation portrait C:/Users/kaadje/AppData/Roaming/Xilinx/Vivado/comp2_RTL.pdf
+C:/Users/kaadje/AppData/Roaming/Xilinx/Vivado/comp2_RTL.pdf
+current_design synth_1
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Xilinx/kayode/lab3/lab3.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Thu Sep 26 19:57:00 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+current_design rtl_1
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3285.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+current_design impl_1
+close_design
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 3285.391 ; gain = 0.000
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3285.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_design
+launch_runs impl_1 -jobs 2
+[Thu Sep 26 20:01:42 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 3285.391 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 3285.391 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3285.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+set_property top comparator [current_fileset]
+update_compile_order -fileset sources_1
+set_property top comparator_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+close_design
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'comparator_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj comparator_test_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xelab -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator_test_behav xil_defaultlib.comparator_test -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator_test_behav xil_defaultlib.comparator_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "comparator_test_behav -key {Behavioral:sim_1:Functional:comparator_test} -tclbatch {comparator_test.tcl} -view {C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg
+WARNING: Simulation object /comparator2_test/A was not found in the design.
+WARNING: Simulation object /comparator2_test/B was not found in the design.
+WARNING: Simulation object /comparator2_test/lt_o was not found in the design.
+WARNING: Simulation object /comparator2_test/eq_o was not found in the design.
+WARNING: Simulation object /comparator2_test/gt_o was not found in the design.
+source comparator_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'comparator_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3285.391 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 80 ns
+run 80 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+save_wave_config {C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg}
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Xilinx/kayode/lab3/lab3.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Thu Sep 26 20:09:49 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3285.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: comparator
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3285.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'comparator' [C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'comparator' (1#1) [C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator.vhd:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3285.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3285.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3285.391 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3285.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3285.391 ; gain = 0.000
+5 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3285.391 ; gain = 0.000
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Xilinx/kayode/lab3/lab3.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Thu Sep 26 20:12:11 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3760.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3760.844 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.039 . Memory (MB): peak = 3762.617 ; gain = 1.773
+[Thu Sep 26 20:14:45 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 3762.617 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 3762.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3762.617 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Sep 26 20:18:22 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1.2
+  **** Build date : Aug  9 2019 at 17:39:47
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292745620A
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Sep 26 20:21:09 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4179.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Sep 26 20:23:29 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator_3.vhd w ]
+add_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator_3.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3_test.vhd w ]
+add_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3_test.vhd
+update_compile_order -fileset sources_1
+set_property top comparator_test3 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top comparator3_test [current_fileset]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/simulate.log"
+export_ip_user_files -of_objects  [get_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3_test.vhd] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3_test.vhd
+file delete -force C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3_test.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator_3.vhd] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator_3.vhd
+file delete -force C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator_3.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3.vhd w ]
+add_files C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator3_test.vhd w ]
+add_files -fileset sim_1 C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator3_test.vhd
+set_property top comparator3 [current_fileset]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+set_property top comparator_test3 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/simulate.log"
+close_project
+****** Webtalk v2019.1.2 (64-bit)
+  **** SW Build 2615518 on Fri Aug  9 15:55:25 MDT 2019
+  **** IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/kayode/lab3/lab3.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Xilinx/kayode/lab3/lab3.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Thu Sep 26 20:36:29 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 109.223 ; gain = 23.113
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 26 20:36:29 2019...
+close_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 4277.703 ; gain = 0.000
+open_project C:/Xilinx/kayode/lab3/lab3.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 4277.703 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'comparator_test3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj comparator_test3_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comparator3'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Xilinx/kayode/lab3/lab3.srcs/sim_1/new/comparator3_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comparator_test3'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+"xelab -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator_test3_behav xil_defaultlib.comparator_test3 -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e7ce2704435a45f2bd552c806da475d4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot comparator_test3_behav xil_defaultlib.comparator_test3 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.comparator3 [comparator3_default]
+Compiling architecture behavioral of entity xil_defaultlib.comparator_test3
+Built simulation snapshot comparator_test3_behav
+
+****** Webtalk v2019.1.2 (64-bit)
+  **** SW Build 2615518 on Fri Aug  9 15:55:25 MDT 2019
+  **** IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/xsim.dir/comparator_test3_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim/xsim.dir/comparator_test3_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Sep 26 20:38:06 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 109.027 ; gain = 23.664
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 26 20:38:06 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 4277.703 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '24' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Xilinx/kayode/lab3/lab3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "comparator_test3_behav -key {Behavioral:sim_1:Functional:comparator_test3} -tclbatch {comparator_test3.tcl} -view {C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/Xilinx/kayode/lab3/comparator_test_behav.wcfg
+WARNING: Simulation object /comparator_test/A was not found in the design.
+WARNING: Simulation object /comparator_test/B was not found in the design.
+WARNING: Simulation object /comparator_test/lt_o was not found in the design.
+WARNING: Simulation object /comparator_test/eq_o was not found in the design.
+WARNING: Simulation object /comparator_test/gt_o was not found in the design.
+source comparator_test3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'comparator_test3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:28 . Memory (MB): peak = 4277.703 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 320 ns
+run 320 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 320 ns
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 4277.703 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: comparator3
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4277.703 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'comparator3' [C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'comparator3' (1#1) [C:/Xilinx/kayode/lab3/lab3.srcs/sources_1/new/comparator3.vhd:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4277.703 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4277.703 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4277.703 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4277.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 4277.703 ; gain = 0.000
+5 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 4277.703 ; gain = 0.000
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Thu Sep 26 20:41:17 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lt_0'. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Xilinx/kayode/lab2/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4277.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_design
+launch_runs impl_1 -jobs 2
+[Thu Sep 26 20:43:18 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 4277.703 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 4277.703 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4277.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Sep 26 20:45:42 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Sep 26 20:49:16 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+[Thu Sep 26 20:49:16 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1.2
+  **** Build date : Aug  9 2019 at 17:39:47
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292745620A
+set_property PROGRAM.FILE {C:/Xilinx/kayode/lab3/lab3.runs/impl_1/comparator3.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Xilinx/kayode/lab3/lab3.runs/impl_1/comparator3.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property top comparator [current_fileset]
+set_property top comparator2_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property top comparator2 [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Sep 26 21:01:59 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+[Thu Sep 26 21:01:59 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Xilinx/kayode/lab3/lab3.runs/impl_1/comparator2.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Xilinx/kayode/lab3/lab3.runs/impl_1/comparator2.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property top comparator [current_fileset]
+set_property top comparator_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Sep 26 21:07:41 2019] Launched synth_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/runme.log
+[Thu Sep 26 21:07:41 2019] Launched impl_1...
+Run output will be captured here: C:/Xilinx/kayode/lab3/lab3.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Xilinx/kayode/lab3/lab3.runs/impl_1/comparator.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Xilinx/kayode/lab3/lab3.runs/impl_1/comparator.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+archive_project C:/Xilinx/kayode/lab3.xpr.zip -temp_dir C:/Users/kaadje/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1820-ICT-50115K -force -include_local_ip_cache
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/kaadje/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1820-ICT-50115K' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/kaadje/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1820-ICT-50115K/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'

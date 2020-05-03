@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.2 (64-bit)
+# SW Build 2615518 on Fri Aug  9 15:55:25 MDT 2019
+# IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+# Start of session at: Thu Sep 26 21:07:44 2019
+# Process ID: 8416
+# Current directory: C:/Xilinx/kayode/lab3/lab3.runs/synth_1
+# Command line: vivado.exe -log comparator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source comparator.tcl
+# Log file: C:/Xilinx/kayode/lab3/lab3.runs/synth_1/comparator.vds
+# Journal file: C:/Xilinx/kayode/lab3/lab3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source comparator.tcl -notrace

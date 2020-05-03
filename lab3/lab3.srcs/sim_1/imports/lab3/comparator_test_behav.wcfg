@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="comparator_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="comparator_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="320000001fs"></ZoomEndTime>
+      <Cursor1Time time="320000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="132"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="/comparator_test/A" type="array">
+      <obj_property name="ElementShortName">A[1:0]</obj_property>
+      <obj_property name="ObjectShortName">A[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comparator_test/B" type="array">
+      <obj_property name="ElementShortName">B[1:0]</obj_property>
+      <obj_property name="ObjectShortName">B[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comparator_test/lt_o" type="logic">
+      <obj_property name="ElementShortName">lt_o</obj_property>
+      <obj_property name="ObjectShortName">lt_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comparator_test/eq_o" type="logic">
+      <obj_property name="ElementShortName">eq_o</obj_property>
+      <obj_property name="ObjectShortName">eq_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/comparator_test/gt_o" type="logic">
+      <obj_property name="ElementShortName">gt_o</obj_property>
+      <obj_property name="ObjectShortName">gt_o</obj_property>
+   </wvobject>
+</wave_config>
